@@ -1,0 +1,22 @@
+- if symptoms.blank?
+  %span.text-warning There are no symptoms!
+- else
+  %table.table.table-hover.table-bordered
+    %thead
+      %tr
+        %th Symptom
+        %th Created at
+        %th Description
+        %th Actions
+      %tbody
+        - symptoms.each do |symptom|
+          %tr
+            %td
+              %strong= symptom.title
+            %td.text-info= symptom.created_at
+            %td.text-success= symptom.note
+            %td
+              = link_to symptom_path(symptom), remote: true, method: :delete, data: {confirm: "Are you sure you want to delete symptom #{symptom.title}?"} do
+                %i.icon-remove
+              = link_to edit_symptom_path(symptom), remote: true do
+                %i.icon-edit

@@ -1,0 +1,4 @@
+m = $('#modal');
+m.html('<%= j(render partial: 'symptom_form', locals: {symptom: @symptom})%>');
+m.modal('show');
+$('#modal').integrateDatepicker();
