@@ -6,7 +6,7 @@
       %tr
         %th Symptom
         %th Rating
-        %th Created at
+        %th Date
         %th Description
         %th Actions
       %tbody
@@ -15,7 +15,7 @@
             %td
               %strong= symptom.title
             %td.text-info= symptom.rating
-            %td.text-info= symptom.created_at
+            %td.text-info= symptom.date
             %td.text-success= symptom.note
             %td
               = link_to symptom_path(symptom), remote: true, method: :delete, data: {confirm: "Are you sure you want to delete symptom #{symptom.title}?"} do
