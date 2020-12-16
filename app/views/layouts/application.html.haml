@@ -14,6 +14,7 @@
           %p
             Welcome to your Symptom List
           = link_to 'New symptom', new_symptom_path, class: 'btn btn-primary', remote: true
+          = link_to 'Sign in with Google', user_google_oauth2_omniauth_authorize_path, class: 'btn btn-primary', remote: true
     .container
     #modal.modal.fade
     = yield
