@@ -38,6 +38,6 @@ class SymptomsController < ApplicationController
   end
 
   def symptom_params
-    params.require(:symptom).permit(:title, :note, :date)
+    params.require(:symptom).permit(:title, :note, :date, :rating)
   end
 end

@@ -5,6 +5,7 @@
     %thead
       %tr
         %th Symptom
+        %th Rating
         %th Created at
         %th Description
         %th Actions
@@ -13,6 +14,7 @@
           %tr
             %td
               %strong= symptom.title
+            %td.text-info= symptom.rating
             %td.text-info= symptom.created_at
             %td.text-success= symptom.note
             %td
