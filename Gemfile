@@ -13,6 +13,7 @@ gem 'devise', '~> 4.2'
 gem 'omniauth-google-oauth2'
 gem 'google-api-client', require: 'google/apis/calendar_v3'
 gem 'cancan'
+gem 'activerecord-session_store'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0'
