@@ -9,7 +9,7 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'coffee-rails'
-gem 'devise'
+gem 'devise', '~> 4.2'
 gem 'omniauth-google-oauth2'
 gem 'google-api-client', require: 'google/apis/calendar_v3'
 

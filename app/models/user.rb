@@ -1,8 +1,10 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :omniauthable, :omniauth_providers => [:google_oauth2]
-  has_many :tasks
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable,
+         :confirmable, :omniauthable, omniauth_providers: [:google_oauth2]
+  has_many :symptoms
 
   def self.from_omniauth(access_token)
     data = access_token.info

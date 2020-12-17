@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_16_064800) do
+ActiveRecord::Schema.define(version: 2020_12_17_035350) do
 
   create_table "symptoms", force: :cascade do |t|
     t.string "title"
@@ -21,20 +21,7 @@ ActiveRecord::Schema.define(version: 2020_12_16_064800) do
     t.decimal "rating"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
-    t.string "access_token"
-    t.datetime "expires_at"
-    t.string "refresh_token"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'inet' for column 'current_sign_in_ip'
 
 end

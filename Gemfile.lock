@@ -269,7 +269,7 @@ GEM
     temple (0.8.2)
     thor (1.0.1)
     tilt (2.0.10)
-    tzinfo (2.0.3)
+    tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
     warden (1.2.9)
@@ -305,7 +305,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   coffee-rails
-  devise
+  devise (~> 4.2)
   google-api-client
   haml
   jbuilder (~> 2.7)
