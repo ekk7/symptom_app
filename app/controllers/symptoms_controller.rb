@@ -11,13 +11,11 @@ class SymptomsController < ApplicationController
   end
 
   def create
-    client = get_google_calendar_client current_user
-    symptom = params[:symptom]
-    title = get_title symptom
-    client.insert_event('primary', title)
-    flash[:notice] = 'Symptom was successfully added.'
+
     #redirect_to symptoms_path
     @symptom = Symptom.create(symptom_params)
+    @symptom.user = current_user
+    authorize! :create, @symptom
     save_symptom
   end
 
@@ -53,18 +51,21 @@ class SymptomsController < ApplicationController
 
   def destroy
     @symptom = Symptom.find(params[:id])
+    authorize! :destroy, @symptom
     @symptom.destroy
     @symptoms = Symptom.all
   end
 
   def edit
     @symptom = Symptom.find(params[:id])
+    authorize! :edit, @symptom
     render :show_form
   end
 
   def update
     @symptom = Symptom.find(params[:id])
     @symptom.update(symptom_params)
+    authorize! :update, @symptom
     save_symptom
   end
 
@@ -103,7 +104,7 @@ class SymptomsController < ApplicationController
 
   def save_symptom
     if @symptom.save
-      @symptoms = Symptom.all
+      @symptoms = Symptom.accessible_by(current_ability)
       render :hide_form
     else
       render :show_form
