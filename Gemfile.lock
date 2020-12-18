@@ -323,7 +323,7 @@ DEPENDENCIES
   listen (~> 3.3)
   omniauth
   omniauth-google-oauth2
-  pg (= 1.2.3)
+  pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.0)
@@ -331,7 +331,7 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   spring
-  sqlite3 (~> 1.4)
+  sqlite3
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
