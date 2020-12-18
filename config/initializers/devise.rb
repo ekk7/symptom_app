@@ -16,8 +16,8 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '34d520907c237cf3352a2b227ce608d7651994a665c465df77b5a65d611ddcb4604570b40833ea86a70aa2223e65aefd8e8af3b7860344f3dd09650c470a28e9'
 
-  config.omniauth :google_oauth2, "649397990616-p0gdkqf2gr92pqgjg3j6kbrtudimcmlh.apps.googleusercontent.com",
-                  "eHX9Wg2XGeGGcKIh1gsRjpiQ"
+  config.omniauth :google_oauth2, "-.apps.googleusercontent.com",
+                  ""
   {
     access_type: "offline",
     prompt: "consent",
