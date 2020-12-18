@@ -3,9 +3,3 @@
 #require 'bugsnag/integrations/rake'
 #
 #
-begin
-  require_relative 'config/application'
-rescue LoadError => e
-  raise e unless ENV['RAILS_ENV'] == "production"
-end
-
