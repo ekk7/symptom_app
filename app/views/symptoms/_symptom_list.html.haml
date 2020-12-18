@@ -1,7 +1,7 @@
 - if symptoms.blank?
   %span.text-warning There are no symptoms!
 - else
-  %table.table.table-hover.table-bordered
+  %table.table.table-hover.table-bordered.table-striped
     %thead
       %tr
         %th Symptom
@@ -22,3 +22,5 @@
                 %i.icon-remove
               = link_to edit_symptom_path(symptom), remote: true do
                 %i.icon-edit
+              %i.icon-calendar
+

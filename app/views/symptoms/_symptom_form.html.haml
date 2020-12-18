@@ -1,4 +1,4 @@
-.modal-header
+.modal-header.text-center
   %h1
     = symptom.new_record? ? 'New Symptom' : "Editing symptom #{symptom.title}"
 = simple_form_for symptom, class: 'clearfix', remote: true do |f|
@@ -8,4 +8,4 @@
     = f.input :rating
     = f.input :date, as: :string, input_html: {class: 'datepicker', value: symptom.date.present? ? localize(symptom.date, format: '%m/%d/%Y') : nil}
   .modal-footer
-    = f.submit 'Save', class: 'btn btn-primary'
+    = f.submit 'Save', class: 'btn btn-dark'

@@ -8,11 +8,11 @@
       input_html: { autocomplete: "email" }
     = f.input :password,
       required: true,
-      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+      hint: ("    (#{@minimum_password_length} characters minimum)" if @minimum_password_length),
       input_html: { autocomplete: "new-password" }
     = f.input :password_confirmation,
       required: true,
       input_html: { autocomplete: "new-password" }
   .form-actions
-    = f.button :submit, "Sign up", class: 'btn btn-primary'
+    = f.button :submit, "Sign up", class: 'btn btn-dark'
 = render "devise/shared/links"

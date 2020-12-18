@@ -320,6 +320,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
+  omniauth
   omniauth-google-oauth2
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)

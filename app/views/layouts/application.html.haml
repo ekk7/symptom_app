@@ -1,24 +1,27 @@
 !!!
 %html
   %head
-    %title Symptoms
+    %title Symptom Tracker
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    %span
+
     .row-fluid
       .span10.offset1
         .hero-unit.text-center
           %h1
             Symptom Tracker
           %p
-            Welcome to your Symptom List
-          = link_to 'New symptom', new_symptom_path, class: 'btn btn-primary', remote: true
-          //= link_to 'Sign in with Google', user_google_oauth2_omniauth_authorize_path, class: 'btn btn-primary'
-          .text-center
-            %strong= current_user.email
-          .text-center
+            %div
+            = link_to 'New symptom', new_symptom_path, class: 'btn btn-dark', remote: true
+
+          .text-right
+            %text-info= current_user.email
+          .text-right
             = link_to 'logout', destroy_user_session_path, method: :delete
+          //= link_to 'Sign in with Google', user_google_oauth2_omniauth_authorize_path, class: 'btn btn-primary'
           //= link_to "Sign In", new_user_session_path
     // = link_to  "Sign Up", new_user_registration_path
     .container
