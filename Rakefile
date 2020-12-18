@@ -3,7 +3,9 @@
 #require 'bugsnag/integrations/rake'
 #
 #
+begin
+  require_relative 'config/application'
+rescue LoadError => e
+  raise e unless ENV['RAILS_ENV'] == "production"
+end
 
-require_relative "config/application"
-
-Rails.application.load_symptoms
